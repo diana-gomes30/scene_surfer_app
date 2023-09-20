@@ -27,7 +27,11 @@ const config: StorybookConfig = {
       config.resolve.alias = {
         ...config.resolve.alias,
         '@': path.resolve(__dirname, '../src'),
+        '@__mocks__': path.resolve(__dirname, '../src/__mocks__'),
         '@components': path.resolve(__dirname, '../src/components'),
+        '@consts': path.resolve(__dirname, '../src/consts'),
+        '@fetchers': path.resolve(__dirname, '../src/fetchers'),
+        '@interfaces': path.resolve(__dirname, '../src/interfaces'),
       };
     }
     return config;

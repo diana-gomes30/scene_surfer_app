@@ -57,7 +57,7 @@ export default function Navbar() {
           </Link>
           <Link
             className="block my-2 md:mr-6 md:inline-block md:my-0 text-white hover:text-gray-300"
-            href={'/series'}
+            href={'/tv-shows'}
           >
             Tv Shows
           </Link>

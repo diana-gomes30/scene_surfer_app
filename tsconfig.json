@@ -19,7 +19,11 @@
       }
     ],
     "paths": {
+      "@__mocks__/*": ["./src/__mocks__/*"],
       "@components/*": ["./src/components/*"],
+      "@consts/*": ["./src/consts/*"],
+      "@fetchers/*": ["./src/fetchers/*"],
+      "@interfaces/*": ["./src/interfaces/*"],
       "@stories/*": ["./src/stories/*"],
       "@/*": ["./src/*"]
     }

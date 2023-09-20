@@ -1,17 +1,15 @@
-export default function Home() {
+import { Movie, ResultMovies } from '@/interfaces/movies';
+import MovieCard from '@components/MovieCard';
+import { getTrendingMovies } from '@fetchers/movies';
+
+export default async function Home() {
+  const trendingMovies: ResultMovies = await getTrendingMovies();
+
   return (
     <main className="flex flex-col min-h-screen text-white">
-      <h1>Hello World!!</h1>
-      <h1>Hello World!!</h1>
-      <h1>Hello World!!</h1>
-      <h1>Hello World!!</h1>
-      <h1>Hello World!!</h1>
-      <h1>Hello World!!</h1>
-      <h1>Hello World!!</h1>
-      <h1>Hello World!!</h1>
-      <h1>Hello World!!</h1>
-      <h1>Hello World!!</h1>
-      <h1>Hello World!!</h1>
+      {trendingMovies.results.map((trendingMovie: Movie) => (
+        <MovieCard key={trendingMovie.id} movie={trendingMovie} />
+      ))}
     </main>
   );
 }
